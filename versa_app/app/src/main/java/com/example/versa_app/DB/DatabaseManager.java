@@ -28,15 +28,17 @@ public class DatabaseManager {
         dbHelper.close();
     }
 
-    public void insert(String name, String desc) {
+    public void insert(String item , String user, int rating, String desc) {
         ContentValues contentValue = new ContentValues();
-        contentValue.put(DatabaseHelper.SUBJECT, name);
+        contentValue.put(DatabaseHelper.ITEM, item);
+        contentValue.put(DatabaseHelper.USER, user);
+        contentValue.put(DatabaseHelper.RATING, Integer.toString(rating));
         contentValue.put(DatabaseHelper.DESC, desc);
         database.insert(DatabaseHelper.TABLE_NAME, null, contentValue);
     }
 
     public Cursor fetch() {
-        String[] columns = new String[] { DatabaseHelper._ID, DatabaseHelper.SUBJECT, DatabaseHelper.DESC };
+        String[] columns = new String[] { DatabaseHelper._ID, DatabaseHelper.ITEM, DatabaseHelper.USER, DatabaseHelper.RATING, DatabaseHelper.DESC };
         Cursor cursor = database.query(DatabaseHelper.TABLE_NAME, columns, null, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -44,9 +46,11 @@ public class DatabaseManager {
         return cursor;
     }
 
-    public int update(long _id, String name, String desc) {
+    public int update(long _id, String item , String user, int rating, String desc) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DatabaseHelper.SUBJECT, name);
+        contentValues.put(DatabaseHelper.ITEM, item);
+        contentValues.put(DatabaseHelper.USER, user);
+        contentValues.put(DatabaseHelper.RATING, Integer.toString(rating));
         contentValues.put(DatabaseHelper.DESC, desc);
         int i = database.update(DatabaseHelper.TABLE_NAME, contentValues, DatabaseHelper._ID + " = " + _id, null);
         return i;
