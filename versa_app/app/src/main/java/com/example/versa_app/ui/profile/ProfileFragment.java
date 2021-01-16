@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.versa_app.R;
-import com.example.versa_app.ui.dashboard.DashboardViewModel;
 
 public class ProfileFragment extends Fragment {
 

@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.versa_app.ui.dashboard.DashboardFragment"
+        android:name="com.example.versa_app.ui.explore.ExploreFragment"
         android:label="@string/title_explore"
         tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.versa_app.ui.notifications.NotificationsFragment"
+        android:name="com.example.versa_app.ui.favourites.FavouritesFragment"
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_favourites" />
 
