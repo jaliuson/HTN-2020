@@ -17,9 +17,11 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DatabaseManager dbManager;
+    public DatabaseManager dbManager;
     final String[] from = new String[] { DatabaseHelper._ID, DatabaseHelper.ITEM, DatabaseHelper.USER, DatabaseHelper.RATING, DatabaseHelper.DESC };
-    ;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         dbManager.open();
         Cursor cursor = dbManager.fetch();
 
+        /*dbManager.insert("Mcdonald's | Coffee","Jason",3,"Bold!");
+        dbManager.insert("Starbucks | Coffee","Carlee",4,"Nice");
+        dbManager.insert("Mcdonald's | Iced Coffee","Jason",4,"Refreshing");
+        dbManager.insert("Mcdonald's | Coffee","Carlee",4,"I like it");*/
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -38,5 +45,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    public void getDataSet(){
+
     }
 }
