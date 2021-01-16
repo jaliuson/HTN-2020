@@ -24,6 +24,7 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <ListView
+        android:id="@+id/suggested_list"
         android:layout_width="321dp"
         android:layout_height="574dp"
         android:background="@drawable/rounded_corners"
