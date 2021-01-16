@@ -5,5 +5,11 @@
     <string name="title_favourites">Saved</string>
     <string name="title_profile">Profile</string>
 
+    <string name="user_name">Dash Incredible</string>
+
+    <string name="lp_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lp_medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin arcu at quam aliquam, at dapibus metus aliquet. Nulla eleifend mi leo. Nunc nec bibendum ante, a vehicula orci</string>
+    <string name="lp_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin arcu at quam aliquam, at dapibus metus aliquet. Nulla eleifend mi leo. Nunc nec bibendum ante, a vehicula orci. Aliquam ullamcorper purus arcu, vel convallis leo ullamcorper non. Fusce tempor sodales nibh eu aliquet.</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
