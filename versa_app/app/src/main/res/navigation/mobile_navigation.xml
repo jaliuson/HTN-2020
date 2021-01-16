@@ -14,14 +14,15 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.versa_app.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_explore"
+        tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.versa_app.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="@string/title_favourites"
+        tools:layout="@layout/fragment_favourites" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.versa_app.ProfileFragment"
