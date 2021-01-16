@@ -18,11 +18,10 @@ public class FavouritesFragment extends Fragment {
 
     private FavouritesViewModel notificationsViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(FavouritesViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        notificationsViewModel = ViewModelProviders.of(this).get(FavouritesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_favourites, container, false);
+
         final TextView textView = root.findViewById(R.id.text_notifications);
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -30,6 +29,7 @@ public class FavouritesFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }
