@@ -4,75 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightGrey"
     tools:context=".ui.explore.ExploreFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="584dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SearchView
+        android:id="@+id/explore_view"
+        android:layout_width="329dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintTop_toBottomOf="@+id/view4">
+
+    </SearchView>
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="200dp"
+        android:id="@+id/resturant_image"
+        android:layout_width="412dp"
         android:layout_height="200dp"
-        android:src="@mipmap/resturant_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/resturant"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintTop_toBottomOf="@+id/category_image" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="200dp"
+        android:id="@+id/category_image"
+        android:layout_width="412dp"
         android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/category_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.017" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/rounded_corners"
-        android:paddingLeft="30dp"
-        android:paddingRight="20dp"
-        android:text="View by Resturant"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/rounded_corners"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:shadowRadius="4"
-        android:text="View by Category"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/explore_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

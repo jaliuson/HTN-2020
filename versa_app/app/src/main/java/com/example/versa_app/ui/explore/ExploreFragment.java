@@ -21,11 +21,11 @@ public class ExploreFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel = ViewModelProviders.of(this).get(ExploresViewModel.class);
         View root = inflater.inflate(R.layout.fragment_explore, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        //final TextView textView = root.findViewById(R.id.text_dashboard);
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                //textView.setText(s);
             }
         });
         return root;

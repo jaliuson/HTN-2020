@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         final TextView textView = root.findViewById(R.id.text_home);
-        final ListView suggestions = root.findViewById(R.id.suggested_list);
+        //final ListView suggestions = root.findViewById(R.id.suggested_list);
 
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
